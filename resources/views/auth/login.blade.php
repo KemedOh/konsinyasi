@@ -1,74 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Login</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
-
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('/assets/img/apple-icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('/assets/css//assets/img/favicon.png') }}">
+    <title>
+        Login Konsinyasi
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Nucleo Icons -->
+    <link href="{{ asset('/assets/css/nucleo-icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="{{ asset('/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link id="pagestyle" href="{{ asset('/assets/css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
 </head>
 
-<body class="img js-fullheight" style="background-image: url('{{ asset('public/assets/images/bg.jpg') }}');">
-    <section class="ftco-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section">Silahkan Login Terlebih Dahulu</h2>
-                </div>
+<body class="">
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+            <div class="col-12">
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="login-wrap p-0">
-                        <h3 class="mb-4 text-center">Have an account?</h3>
-                        <form action="#" class="signin-form">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Username" required>
-                            </div>
-                            <div class="form-group">
-                                <input id="password-field" type="password" class="form-control" placeholder="Password"
-                                    required>
-                                <span toggle="#password-field"
-                                    class="fa fa-fw fa-eye field-icon toggle-password"></span>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
-                            </div>
-                            <div class="form-group d-md-flex">
-                                <div class="w-50">
-                                    <label class="checkbox-wrap checkbox-primary">Remember Me
-                                        <input type="checkbox" checked>
-                                        <span class="checkmark"></span>
-                                    </label>
+        </div>
+    </div>
+    <main class="main-content  mt-0">
+        <section>
+            <div class="page-header min-vh-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
+                            <div class="card card-plain">
+                                <div class="card-header pb-0 text-start">
+                                    <h4 class="font-weight-bolder">Sign In</h4>
+                                    <p class="mb-0">Enter your email and password to sign in</p>
                                 </div>
-                                <div class="w-50 text-md-right">
-                                    <a href="#" style="color: #fff">Forgot Password</a>
+                                <div class="card-body">
+                                    <form role="form">
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control form-control-lg" placeholder="Email"
+                                                aria-label="Email">
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="email" class="form-control form-control-lg"
+                                                placeholder="Password" aria-label="Password">
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="button"
+                                                class="btn btn-lg btn-primary btn-lg w-100 mt-4 mb-0">Sign in</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                                    <p class="mb-4 text-sm mx-auto">
+                                        Don't have an account?
+                                        <a href="{{ ('registration') }}"
+                                            class="text-primary text-gradient font-weight-bold">Sign
+                                            up</a>
+                                    </p>
                                 </div>
                             </div>
-                        </form>
-                        <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
-                        <div class="social d-flex text-center">
-                            <a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span>
-                                Facebook</a>
-                            <a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span>
-                                Twitter</a>
+                        </div>
+                        <div
+                            class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
+                            <div class="position-relative bg-gradient-primary h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden"
+                                style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signin-ill.jpg');
+          background-size: cover;">
+                                <span class="mask bg-gradient-primary opacity-6"></span>
+                                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Attention is the new
+                                    currency"</h4>
+                                <p class="text-white position-relative">The more effortless the writing looks, the more
+                                    effort the
+                                    writer actually put into the process.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-
+        </section>
+    </main>
+    <!--   Core JS Files   -->
+    <script src="{{ asset('/assets/js/core/popper.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/core/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/plugins/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('/assets/js/plugins/smooth-scrollbar.min.js') }}"></script>
+    <script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="{{ asset('/assets/js/argon-dashboard.min.js?v=2.0.4') }}"></script>
 </body>
 
 </html>

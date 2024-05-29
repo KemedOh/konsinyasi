@@ -24,11 +24,11 @@ class AuthController extends Controller
      */
     public function dashboard(UsersByIdChart $userChart)
     {
-        if (Auth::check()) {
-            $user = User::count();
-            return view('dashboard', compact('user'), ['chart' => $userChart->build()]);
-        }
-        return redirect("login")->withSucces('Opps! kamu belum login');
+        // if (Auth::check()) {
+        //     $user = User::count();
+        return view('dashboard');
+        // }
+        // return redirect("login")->withSucces('Opps! kamu belum login');
     }
     public function index(): View
     {
