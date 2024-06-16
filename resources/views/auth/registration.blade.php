@@ -104,16 +104,39 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <form role="form">
+                            <form action="{{ route('register.post') }}" method="POST">
+                                @csrf
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Name" aria-label="Name">
+                                    <input type="text" class="form-control" name="name" placeholder="Name"
+                                        aria-label="Name">
+                                    @if ($errors->has('name'))
+                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+                                    <input type="email" class="form-control" name="email" placeholder="Email"
+                                        aria-label="Email">
+                                    @if ($errors->has('email'))
+                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                    @endif
                                 </div>
                                 <div class="mb-3">
-                                    <input type="password" class="form-control" placeholder="Password"
+                                    <input type="password" class="form-control" name="password" placeholder="Password"
                                         aria-label="Password">
+                                    @if ($errors->has('password'))
+                                        <span class="text-danger">{{ $errors->first('password') }}</span>
+                                    @endif
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-select" id="role" name="role" aria-label="role">
+                                        <option value="">Choose</option>
+                                        @foreach($roles as $val)
+                                            <option value="{{$val->id}}">{{$val->role_name}}</option>
+                                        @endforeach
+                                    </select>
+                                    @if ($errors->has('role'))
+                                        <span class="text-danger">{{ $errors->first('role') }}</span>
+                                    @endif
                                 </div>
                                 <div class="form-check form-check-info text-start">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
@@ -124,7 +147,7 @@
                                     </label>
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
+                                    <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
                                 </div>
                                 <p class="text-sm mt-3 mb-0">Already have an account? <a href="{{ ('login') }}"
                                         class="text-dark font-weight-bolder">Sign in</a></p>

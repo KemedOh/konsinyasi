@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('/assets/img/apple-icon.png') }}">
     <link rel="icon" type="image/png" href="{{ asset('/assets/img/favicon.png') }}">
     <title>
-        Users
+        Products
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -252,41 +252,51 @@
                 <div class="col-12">
                     <div class="card mb-4">
                         <div class="card-header pb-0">
-                            <h6>Users Table</h6>
+                            <h6>Products Table</h6>
                         </div>
                         <div class="card-body">
-                            <a href="{{route('users.create')}}" class="btn btn-sm btn-secondary">
-                                Tambah User
+                            <a href="{{ route('products.create') }}" class="btn btn-sm btn-secondary">
+                                Tambah Product
                             </a>
                             <table class="table table-striped" id="users">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Full Name</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">Role</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col">Product Name</th>
+                                        <th scope="col">QTY</th>
+                                        <th scope="col">Selling Price</th>
+                                        <th scope="col">Buying Price</th>
+                                        <th scope="col">Product Type</th>
+                                        <th scope="col">Product Status</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $no = 0; ?>
-                                    @foreach($users as $row)
+                                    @foreach($products as $row)
                                         <?php    $no++ ?>
                                         <tr>
                                             <th scope="row">{{ $no }}</th>
-                                            <td>{{$row->fullname}}</td>
-                                            <td>{{$row->email}}</td>
-                                            <td>{{$row->role?->role_name}}</td>
-                                            <td>{{$row->status}}</td>
+                                            <td>{{$row->product_name}}</td>
+                                            <td>{{$row->qty}}</td>
+                                            <td>{{$row->selling_price}}</td>
+                                            <td>{{$row->buying_price}}</td>
+                                            <td>{{$row->product_type->product_type_name}}</td>
                                             <td>
-                                                <a href="{{ route('users.edit', $row->id) }}"
+                                                @if ($row->qty > 0)
+                                                    Available
+                                                @else
+                                                    Unavailable
+                                                @endif
+                                            </td>
+                                            <td>
+                                                <a href="{{ route('products.edit', $row->id) }}"
                                                     class="btn btn-sm btn-warning">
                                                     Edit
                                                 </a>
-                                                <form action="{{ route('users.destroy', $row->id) }}" method="POST"
+                                                <form action="{{ route('products.destroy', $row->id) }}" method="POST"
                                                     style="display: inline"
-                                                    onsubmit="return confirm('Do you really want to delete {{ $row->fullname }}?');">
+                                                    onsubmit="return confirm('Do you really want to delete {{ $row->product_name }}?');">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-sm btn-danger"><span

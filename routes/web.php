@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,6 @@ Route::post('user-import', [UserController::class, 'import'])->name('user-import
 
 Route::resource('users', UserController::class);
 Route::get('user', [UserController::class, 'index'])->name('user.index');
+
+Route::resource('products', ProductController::class);
+Route::get('product', [ProductController::class, 'index'])->name('products.index');

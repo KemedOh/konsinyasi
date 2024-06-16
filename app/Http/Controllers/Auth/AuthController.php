@@ -70,7 +70,7 @@ class AuthController extends Controller
                 ->withSuccess('You have Successfully logged in with token');
         }
 
-        return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
+        return redirect("login")->withSuccess('Oppes! You have entered invalid email or password');
     }
 
     /**
