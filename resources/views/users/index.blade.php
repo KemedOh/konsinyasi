@@ -32,7 +32,7 @@
             <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
                 target="_blank">
                 <img src="{{ asset('/assets/img/logo-ct-dark.png') }}" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="ms-1 font-weight-bold">Argon Dashboard 2</span>
+                <span class="ms-1 font-weight-bold">User Table</span>
             </a>
         </div>
         <hr class="horizontal dark mt-0">
@@ -53,16 +53,16 @@
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Tables</span>
+                        <span class="nav-link-text ms-1">Users</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{ ('#') }}">
+                    <a class="nav-link " href="{{ ('product') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Billing</span>
+                        <span class="nav-link-text ms-1">Products</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -93,24 +93,6 @@
                             <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text ms-1">Profile</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{ ('#') }}">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Sign In</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{ ('#') }}">
-                        <div
-                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="ni ni-collection text-info text-sm opacity-10"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Sign Up</span>
                     </a>
                 </li>
             </ul>

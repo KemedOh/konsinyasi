@@ -11,6 +11,9 @@
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
     <!-- Nucleo Icons -->
     <link href="{{ asset('/assets/css/nucleo-icons.css') }}" rel="stylesheet" />
     <link href="{{ asset('/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
@@ -19,6 +22,16 @@
     <link href="{{ asset('/assets/css/nucleo-svg.css') }}" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="{{ asset('/assets/css/argon-dashboard.css?v=2.0.4') }}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{{asset('fonts/icomoon/style.css') }}">
+
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css') }}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{{asset('css/style.css') }}">
 </head>
 
 <body class="g-sidenav-show   bg-gray-100">
@@ -36,15 +49,21 @@
         </div>
         <hr class="horizontal dark mt-0">
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="{{('dashboard')}}">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false" href="{{('#')}}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Dashboard</span>
+                        Menu
                     </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="{{('user')}}">
@@ -52,16 +71,16 @@
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Users</span>
+                        <span class="nav-link-text ms-1">Tables</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{ ('product') }}">
+                    <a class="nav-link " href="{{ ('#') }}">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
                         </div>
-                        <span class="nav-link-text ms-1">Products</span>
+                        <span class="nav-link-text ms-1">Billing</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -782,6 +801,11 @@
             </div>
         </div>
     </div>
+    <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{asset('js/popper.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
     <!--   Core JS Files   -->
     <script src="{{ asset('/assets/js/core/popper.min.js') }}"></script>
     <script src="{{ asset('/assets/js/core/bootstrap.min.js') }}"></script>
